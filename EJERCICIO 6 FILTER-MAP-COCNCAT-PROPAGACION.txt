@@ -1,0 +1,50 @@
+// Una variable que contenga la lista de la compra
+let listaCompra = ['Carne', 'Pan', 'Leche', 'chocolate', 'Huevos'];
+console.log(listaCompra)
+
+// Modifica la lista de la compra y añádele "Aceite de Girasol"
+listaCompra.push('Aceite de Girasol');
+
+
+// Vuelve a modificar la lista de la compra eliminando "Aceite de Girasol"
+listaCompra = listaCompra.filter(item => item !== 'Aceite de Girasol');
+
+
+// Una lista de tus 3 películas favoritas (objetos con propiedades: titulo, director, fecha)
+let peliculasFavoritas = [
+  {
+    titulo: 'Avatar',
+    director: 'James Cameron',
+    fecha: 2010
+  },
+  {
+    titulo: 'Shrek',
+    director: 'Vickey Jenson',
+    fecha: 2001
+  },
+  {
+    titulo: 'Toy Story',
+    director: 'John Laseter',
+    fecha: 1995
+  }
+];
+
+// Una nueva lista que contenga las películas posteriores al 1 de enero de 2010 (utilizando filter)
+let peliculasPosteriores2010 = peliculasFavoritas.filter(pelicula => pelicula.fecha > 2010);
+
+
+// Una nueva lista que contenga los directores de la lista de películas original (utilizando map)
+let directores = peliculasFavoritas.map(pelicula => pelicula.director);
+console.log(directores)
+
+// Una nueva lista que contenga los títulos de la lista de películas original (utilizando map)
+let titulos = peliculasFavoritas.map(pelicula => pelicula.titulo);
+console.log(titulos)
+
+// Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando concat)
+let directoresYTtitulos = directores.concat(titulos);
+console.log(directoresYTtitulos)
+
+// Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando el factor de propagación)
+let directoresYTtitulos2 = [...directores, ...titulos];
+console.log(directoresYTtitulos2)
